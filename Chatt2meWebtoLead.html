@@ -123,9 +123,9 @@
             
     <div class="container" >
         
-    <form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+    <form name="formCadastro"  onsubmit="return validarFormulario" action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
     <input type=hidden name="oid" value="00D050000008qkJ">
-    <input type=hidden name="retURL" value="https://chatt2.me/">
+    <input type=hidden name="retURL" value="https://">
     
     <!-- ----------------------------------------------------------------------  -->
     <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
@@ -145,12 +145,22 @@
     <input  id="email" maxlength="80" name="email" size="20" type="email" placeholder="E-mail corporativo*" required/><br>
     <!--<div class="g-recaptcha" data-sitekey="6Ldf4OodAAAAABC2liMq0Q9Gz9NUqs6TgA5S3wm1"></div><br>-->
     <div class="botao">
-        <button type="submit" name="SOLICITAR CONTATO"/>SOLICITAR CONTATO</button>
+        <button type="submit" name="SOLICITAR CONTATO" id="enviar"/>SOLICITAR CONTATO</button>
     </div>
     </form>
     </div>
-    
-             
+    <!-- JS MSG PLUGIN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+             <script>
+                $("#enviar").click(function() {
+        
+                    swal("Obrigado pelo contato.","Em breve entraremos em contato!");
+                    
+                  });
+                  
+             </script>
     
         </body>
     </html>
