@@ -14,7 +14,7 @@
           font-family: 'Roboto',Helvetica,Arial,Lucida,sans-serif;
           background-color: #fff;
         }
-        h2{
+        h1{
             text-align: center;
             padding-top: 50px;
             text-transform: uppercase;
@@ -34,7 +34,7 @@
             letter-spacing: .5px;
             margin-bottom: 35px;
             color: #292d34;
-            padding: 5px;
+            padding: 1px;
         }
         p{
             text-align: center;
@@ -44,7 +44,7 @@
             font-weight: 500;
             margin: 0;
             padding-top: 0;
-             padding-bottom: 0px;
+             padding-bottom: 15px;
             border: 0;
             outline: 0;
 
@@ -114,18 +114,18 @@
     </style>
        <html>
         <body>
-            <h2>É HORA DE INOVAR</h2>
-            <p>Modernize a forma como você se <br>comunica com os seus clientes.</p>
-            <h3>Quer saber mais? <br>
+            <!--<h2>É HORA DE INOVAR</h2>-->
+            <h1><b>Modernize a forma de se <br>comunicar com os seus clientes</b></h1>>
+            <p><b>Preencha o formulário abaixo e o nosso time <br>
 
-                Solicite um contato!</h3>
+                entrará em contato com você</b></p>
             
             
     <div class="container" >
         
     <form name="formCadastro"  onsubmit="return validarFormulario" action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
     <input type=hidden name="oid" value="00D050000008qkJ">
-    <input type=hidden name="retURL" value="https://">
+    <input type=hidden name="retURL" value="https://chatt2.me/">
     
     <!-- ----------------------------------------------------------------------  -->
     <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
@@ -149,14 +149,18 @@
     </div>
     </form>
     </div>
-    <!-- JS MSG PLUGIN-->
+    <!--Libs msg de sucess no cadastro-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
              <script>
                 $("#enviar").click(function() {
-        
-                    swal("Obrigado pelo contato.","Em breve entraremos em contato!");
+                    
+                    swal("Muito Obrigado!","Recebemos seu contato com sucesso e retornaremos em breve!","success",{
+                        buttons: false,
+                        timer:60000,
+                    
+                    });
                     
                   });
                   
